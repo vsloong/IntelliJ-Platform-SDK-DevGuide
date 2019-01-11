@@ -1,8 +1,11 @@
 ### 该文章系本人初次练手翻译，同时也是为了强迫自己阅读英文文档并学习IntelliJ平台插件开发的一次尝试，如有翻译不恰当之处还请多多指教。
 
-原文档地址在：https://github.com/JetBrains/intellij-sdk-docs 
+原文档地址在：https://github.com/JetBrains/intellij-sdk-docs
 
+-----  
+# 开发指南目录在这里【[目录](Summary.md)】
 -----
+
 
 # IntelliJ 平台SDK开发文档
 这是[IntelliJ平台SDK文档](http://www.jetbrains.org/intellij/sdk/docs/welcome.html)的存储仓库。
