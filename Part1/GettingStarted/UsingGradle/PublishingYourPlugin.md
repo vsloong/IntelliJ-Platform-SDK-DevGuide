@@ -56,5 +56,16 @@ version '1.2' // Update me!
 
 为了获得最稳定的效果，插件开发人员应该使用固定的版本，而不是 ```LATEST-TRUNK-SNAPSHOT（最新版本）``` 。有关IntelliJ平台的可用版本信息，您可以参考以下URL获取最新的更新：  
 - Releases: https://www.jetbrains.com/intellij-repository/releases  
+- Snapshots: https://www.jetbrains.com/intellij-repository/snapshots  
 
-- Snapshots: https://www.jetbrains.com/intellij-repository/snapshots
+## 2.3部署您的插件
+部署插件的第一步是确认插件能否正常工作。您可以通过在新的IntelliJ IDEA Community Edition版本上选择 ```installing your plugin from disk（从磁盘上安装插件）``` 来验证这一点。一旦您确信插件可以按照预期正常运行，发布前请确保插件版本已更新，因为JetBrains插件仓库不会接受具有相同版本的多个文件。要将插件的新版本部署到JetBrains插件仓库，请执行以下Gradle命令：
+```gradle
+gradle publishPlugin
+```
+现在查看插件的最新版本是否出现在 ```Plugin Repository``` 中。如果插件部署成功，在符合条件的IntelliJ平台上安装您的插件的任何用户都将在启动IDE时收到可用更新的通知。  
+
+您还可以通过配置 ```intellij.publish.channel``` 属性将插件部署到您选择要发布的渠道。当该属性为空时，将使用默认的插件仓库，并且所有[JetBrains plugin repository](https://plugins.jetbrains.com/)用户都可以访问到。当然，您也可以发布到任意命名的渠道。但是不管怎样这些非默认的发布渠道都将被视为单独的仓库。当使用非默认发布渠道时，用户需要添加一个新的[custom plugin repository（自定义插件库）](https://www.jetbrains.com/help/idea/managing-plugins.html#repos)来安装插件。例如，如果指定 ```intellij.publish.channel 'canary'``` ，则用户将需要添加 ```https://plugins.jetbrains.com/plugins/canary/list``` 仓库来安装插件并接收更新。流行的渠道名称包括：
+-  ```alpha``` : https://plugins.jetbrains.com/plugins/alpha/list  
+-  ```beta``` : https://plugins.jetbrains.com/plugins/beta/list  
+-  ```eap``` : https://plugins.jetbrains.com/plugins/eap/list
