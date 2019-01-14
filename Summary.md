@@ -18,9 +18,9 @@
   * [使用Gradle开发插件](Part1/GettingStarted/UsingGradle/UsingGradle.md)  
     * [使用Gradle开发](Part1/GettingStarted/UsingGradle/GettingStartedWithGradle.md)  
     * [发布您的插件](Part1/GettingStarted/UsingGradle/PublishingYourPlugin.md)
-  * [使用DevKit开发插件]()（待续）  
+  * [使用DevKit开发插件](Part1/GettingStarted/UsingDevKit/UsingDevKit.md)
     * [搭建开发环境](Part1/GettingStarted/UsingDevKit/SettingUpADevelopmentEnvironment.md)  
-    * [创建插件工程]()（待续）  
+    * [创建插件工程](Part1/GettingStarted/UsingDevKit/CreatingAPluginProject.md)  
     * [创建Action]()（待续）  
     * [运行和调试插件]()（待续）  
     * [部署插件]()（待续）  
