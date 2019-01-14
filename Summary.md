@@ -21,7 +21,7 @@
   * [使用DevKit开发插件](Part1/GettingStarted/UsingDevKit/UsingDevKit.md)
     * [搭建开发环境](Part1/GettingStarted/UsingDevKit/SettingUpADevelopmentEnvironment.md)  
     * [创建插件工程](Part1/GettingStarted/UsingDevKit/CreatingAPluginProject.md)  
-    * [创建Action]()（待续）  
+    * [创建Action](Part1/GettingStarted/UsingDevKit/CreatingAnAction.md)  
     * [运行和调试插件]()（待续）  
     * [部署插件]()（待续）  
     * [发布插件]()（待续）  
