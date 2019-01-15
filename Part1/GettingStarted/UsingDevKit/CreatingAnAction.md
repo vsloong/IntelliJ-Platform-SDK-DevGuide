@@ -58,3 +58,30 @@ public class TextBoxes extends AnAction {
 
 ### 从Java代码中注册Actions
 或者，您可以通过Java代码注册您的操作。有关说明如何从Java代码注册操作的更多信息和示例，请参见[IntelliJ Platform Action System]()。
+
+### 快捷创建Actions
+IntelliJ平台提供了 **New Action** 向导，该向导提供了一些必需的基础操作简化创建Action的方法。它可以帮助您声明Action类，并自动对plugin.xml文件的 ```<action>``` 部分进行适当的更改。  
+但是请注意，只能使用该向导向主菜单或工具栏上的现有菜单组添加新操作。如果要创建新的菜单组，然后向此组添加操作，请按照本文档前面的说明进行操作。
+
+#### **使用New Action向导创建并注册Action**
+- 在项目中您目标包的上下文菜单上单击 **New** 或按 **Alt + Insert** 。  
+- 在 **New** 菜单上，单击 **Action** 。  
+
+![](http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/img/new_action_template.png)  
+
+- 在新打开的 **New Action** 页面上，填写以下字段，然后单击OK：  
+  - **Action ID** ：输入Action的唯一ID。推荐格式：```PluginName.ID```  。
+  - **Class Name** ：输入要创建的Action类的名称。  
+  - **Name** ：输入与Action关联的菜单项名称或工具栏按钮的提示。  
+  - **Description** ：输入Action的描述信息。当聚焦到该Action时您的IDEA会展示此描述。  
+  - 在 **Add to Group** 区域中的 **Groups** 、**Actions** 和 **Anchor** 选项下，可以指定要添加的新的菜单组，以及相对于其他现有菜单的位置进行创建。  
+  - 在 **Keyboard Shortcuts** 区域中，可以为Action指定第一和第二快捷键。    
+
+
+  ![](http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/img/new_action_page.png)   
+
+  以上操作完成后，IntelliJ平台将生成一个具有指定类名的 ```.java``` 文件，并在plugin.xml文件中注册新创建的Action，然后会向模块树视图添加一个节点，并在编辑器中打开新创建的Action文件。  
+
+
+## 更多信息
+有关操作的更多信息，请查看[action system documentation]()和[actions tutorial]()。
