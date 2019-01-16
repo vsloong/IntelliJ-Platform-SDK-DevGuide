@@ -14,7 +14,7 @@
 ## 第一章 - 插件
 * [介绍]()（待续）  
   * [插件的主要类型]()（待续）  
-* [开始]()（待续）  
+* [开始](Part1/GettingStarted/GettingStarted.md)  
   * [使用Gradle开发插件](Part1/GettingStarted/UsingGradle/UsingGradle.md)  
     * [使用Gradle开发](Part1/GettingStarted/UsingGradle/GettingStartedWithGradle.md)  
     * [发布您的插件](Part1/GettingStarted/UsingGradle/PublishingYourPlugin.md)
@@ -22,9 +22,9 @@
     * [搭建开发环境](Part1/GettingStarted/UsingDevKit/SettingUpADevelopmentEnvironment.md)  
     * [创建插件工程](Part1/GettingStarted/UsingDevKit/CreatingAPluginProject.md)  
     * [创建Action](Part1/GettingStarted/UsingDevKit/CreatingAnAction.md)  
-    * [运行和调试插件]()（待续）  
-    * [部署插件]()（待续）  
-    * [发布插件]()（待续）  
+    * [运行和调试插件](Part1/GettingStarted/UsingDevKit/RunningAndDebuggingAPlugin.md)  
+    * [部署插件](Part1/GettingStarted/UsingDevKit/DeployingAPlugin.md)  
+    * [发布插件](Part1/GettingStarted/UsingDevKit/PublishingAPlugin.md)  
 * [插件仓库]()（待续）  
 * [插件结构]()（待续）  
   * [插件的Content]()（待续）  
