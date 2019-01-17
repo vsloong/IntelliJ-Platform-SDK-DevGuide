@@ -6,5 +6,5 @@ Plugin DevKit是IntelliJ插件，它支持使用IntelliJ IDEA自己的构建系�
 * [创建插件工程](CreatingAPluginProject.md)  
 * [创建Action](CreatingAnAction.md)
 * [运行和调试插件](RunningAndDebuggingAPlugin.md)  
-* [部署插件]()（待续）  
-* [发布插件]()（待续）
+* [部署插件](DeployingAPlugin.md)  
+* [发布插件](PublishingAPlugin.md)

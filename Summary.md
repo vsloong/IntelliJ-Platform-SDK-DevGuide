@@ -25,7 +25,7 @@
     * [运行和调试插件](Part1/GettingStarted/UsingDevKit/RunningAndDebuggingAPlugin.md)  
     * [部署插件](Part1/GettingStarted/UsingDevKit/DeployingAPlugin.md)  
     * [发布插件](Part1/GettingStarted/UsingDevKit/PublishingAPlugin.md)  
-* [插件仓库]()（待续）  
+* [自定义插件仓库](Part1/CustomPluginRepositories.md)  
 * [插件结构]()（待续）  
   * [插件的Content]()（待续）  
   * [插件的Class Loaders]()（待续）  
