@@ -27,9 +27,9 @@
     * [发布插件](Part1/GettingStarted/UsingDevKit/PublishingAPlugin.md)  
 * [自定义插件仓库](Part1/CustomPluginRepositories.md)  
 * [插件结构](Part1/PluginStructure/PluginStructure.md)  
-  * [插件的Content]()（待续）  
-  * [插件的Class Loaders]()（待续）  
-  * [插件的Components]()（待续）  
+  * [插件的Content](Part1/PluginStructure/PluginContent.md)  
+  * [插件的Class Loaders](Part1/PluginStructure/PluginClassLoaders.md)  
+  * [插件的Components](Part1/PluginStructure/PluginComponents.md)  
   * [插件的Extensions和Extension Points]()（待续）  
   * [插件的Acitons]()（待续）  
   * [插件的Services]()（待续）  
