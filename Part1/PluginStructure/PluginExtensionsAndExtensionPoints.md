@@ -45,3 +45,42 @@ public class MyBeanClass1 extends AbstractExtensionPointBean {
   }
 }
 ```  
+
+注意，要声明用于访问```MyExtensionPoint1```扩展点的扩展名，```plugin.xm```l文件必须包含```<MyExtensionPoint1```>标记，并将```key```和```implementationClass```属性设置为适当的值（见下面的示例）。  
+
+### 声明extension
+- 对于```<extensions>```元素，将```xmlns```(已弃用)或```defaultExtensionNs```属性设置为以下值之一：  
+  - ```com.intellij```，如果您的插件扩展了IntelliJ平台的核心功能。  
+  - ```{ID of a plugin}```，如果您的插件扩展了另一个插件的功能。   
+- 将一个新的子元素添加到```<extensions>```元素中。子元素名必须与要访问扩展的扩展点的名称相匹配。  
+- 根据扩展点的类型，执行以下操作之一：
+  - 如果扩展点是使用```interface```属性声明的，对于新添加的子元素，设置```implementation```给实现指定接口的类的名称。
+  - 如果扩展点是使用```beanClass```属性声明的，对于新添加的子元素，在指定的bean类中设置所有带有[@Attribute](https://upsource.jetbrains.com/idea-ce/file/idea-ce-a7b3d4e9e48efbd4ac75105e9737cea25324f11e/xml/dom-openapi/src/com/intellij/util/xml/Attribute.java)注释的属性。  
+
+为了澄清这个过程，请考虑plugin.xml文件的以下示例部分，该部分定义了两个扩展，用于访问 *IntelliJ Platform* 中的 ```appStarter``` 和 ```applicationConfigurable``` 扩展点，以及一个用于访问测试插件中 ```MyExtensionPoint1``` 扩展点的扩展：  
+
+```xml
+<!-- Declare extensions to access extension points in the IntelliJ Platform.
+     These extension points have been declared using the "interface" attribute.
+ -->
+  <extensions defaultExtensionNs="com.intellij">
+    <appStarter implementation="MyTestPackage.MyTestExtension1" />
+    <applicationConfigurable implementation="MyTestPackage.MyTestExtension2" />
+  </extensions>
+
+<!-- Declare extensions to access extension points in a custom plugin
+     The MyExtensionPoint1 extension point has been declared using *beanClass* attribute.
+-->
+  <extensions defaultExtensionNs="MyPluginID">
+     <MyExtensionPoint1 key="keyValue" implementationClass="MyTestPackage.MyClassImpl"></MyExtensionPoint1>
+  </extensions>
+```
+
+## 如何获得扩展点列表？
+要获得 *IntelliJ Platform* 核心中可用的扩展点列表，请参阅以下XML配置文件的 ```<extensionPoints>``` 部分：  
+- [LangExtensionPoints.xml](https://upsource.jetbrains.com/idea-ce/file/idea-ce-a7b3d4e9e48efbd4ac75105e9737cea25324f11e/platform/platform-resources/src/META-INF/LangExtensionPoints.xml)
+- [PlatformExtensionPoints.xml](https://upsource.jetbrains.com/idea-ce/file/idea-ce-a7b3d4e9e48efbd4ac75105e9737cea25324f11e/platform/platform-resources/src/META-INF/PlatformExtensionPoints.xml)
+- [VcsExtensionPoints.xml](https://upsource.jetbrains.com/idea-ce/file/idea-ce-a7b3d4e9e48efbd4ac75105e9737cea25324f11e/platform/platform-resources/src/META-INF/VcsExtensionPoints.xml)  
+
+## 补充资料和样本
+有关如何创建有助于IDEA核心的插件的示例插件和详细说明，请参阅定制IDEA设置对话框和创建工具窗口。
