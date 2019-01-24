@@ -30,9 +30,9 @@
   * [插件的Content](Part1/PluginStructure/PluginContent.md)  
   * [插件的Class Loaders](Part1/PluginStructure/PluginClassLoaders.md)  
   * [插件的Components](Part1/PluginStructure/PluginComponents.md)  
-  * [插件的Extensions和Extension Points]()（待续）  
-  * [插件的Acitons]()（待续）  
-  * [插件的Services]()（待续）  
+  * [插件的Extensions和Extension Points](Part1/PluginStructure/PluginExtensionsAndExtensionPoints.md)  
+  * [插件的Acitons](Part1/PluginStructure/PluginActions.md)  
+  * [插件的Services](Part1/PluginStructure/PluginServies.md)  
   * [插件的Configuration File]()（待续）  
   * [插件的Icon]()（待续）
   * [插件的Dependencies]()（待续）  
