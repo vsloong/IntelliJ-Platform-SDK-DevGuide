@@ -33,9 +33,9 @@
   * [插件的Extensions和Extension Points](Part1/PluginStructure/PluginExtensionsAndExtensionPoints.md)  
   * [插件的Acitons](Part1/PluginStructure/PluginActions.md)  
   * [插件的Services](Part1/PluginStructure/PluginServies.md)  
-  * [插件的Configuration File]()（待续）  
-  * [插件的Icon]()（待续）
-  * [插件的Dependencies]()（待续）  
+  * [插件的Configuration File](Part1/PluginStructure/PluginConfigurationFile.md)  
+  * [插件的Icon](Part1/PluginStructure/PluginIcon.md)
+  * [插件的Dependencies](Part1/PluginStructure/PluginDependencies.md)（待续）  
 * [使用Kotlin开发插件]()（待续）  
 * [IDE开发实例]()（待续）  
 * [插件开发常见问题]()（待续）
